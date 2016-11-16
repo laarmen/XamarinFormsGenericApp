@@ -4,8 +4,37 @@
              xmlns:local="clr-namespace:XamarinFormsGenericApp"
              x:Class="XamarinFormsGenericApp.MainPage">
 
-  <Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
-
+  <StackLayout StackLayout.Orientation="Vertical">
+    <RelativeLayout x:Name="ColorContainer"
+             HeightRequest="200"
+             WidthRequest="200"
+             VerticalOptions="Start"
+             HorizontalOptions="Center">
+    <AbsoluteLayout x:Name="Blue" BackgroundColor="Blue"
+        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Width,Factor=0.33,Constant=0}"
+        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=0.16,Constant=0}"
+        RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=0.5,Constant=0}"
+        RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Height,Factor=0.5,Constant=0}"
+  />
+    </RelativeLayout>
+    <AbsoluteLayout x:Name="AbsoluteColorContainer"
+             HeightRequest="200"
+             WidthRequest="200"
+             VerticalOptions="Start"
+             HorizontalOptions="Center">
+    <AbsoluteLayout x:Name="AbsoluteBlue" BackgroundColor="Blue"
+      AbsoluteLayout.LayoutBounds="66, 33, 100, 100"
+    />
+    </AbsoluteLayout>
+    <Button Text="Blue above Red above Green" Button.Clicked="BlueRedGreenLayout"
+             VerticalOptions="End"
+             HorizontalOptions="FillAndExpand" />
+    <Button Text="Blue above Green above Red" Button.Clicked="BlueGreenRedLayout"
+             VerticalOptions="End"
+             HorizontalOptions="FillAndExpand" />
+</StackLayout>
 </ContentPage>
