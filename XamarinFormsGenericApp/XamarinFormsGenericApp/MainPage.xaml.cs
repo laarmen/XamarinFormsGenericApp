@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,13 @@ namespace XamarinFormsGenericApp
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        public void UseDependency(object sender, EventArgs args)
+        {
+            var dep = DependencyService.Get<IDependency>();
+            // Aaaaaaaand crash.
+            dep.DoStuff();
         }
     }
 }

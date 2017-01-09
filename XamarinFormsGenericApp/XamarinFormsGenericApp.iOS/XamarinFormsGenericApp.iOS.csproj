@@ -138,6 +138,16 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Lib\Lib.iOS\Lib.iOS.csproj">
+      <Project>{3f6e6002-6280-45e2-bdc3-325dda8a0b1e}</Project>
+      <Name>Lib.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Lib\Lib.csproj">
+      <Project>{82d85215-bd27-4366-9e67-e83e67eb2d8a}</Project>
+      <Name>Lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XamarinFormsGenericApp\XamarinFormsGenericApp.csproj">
       <Project>{1f709b79-e3ba-4b7f-a10a-6858f5881b9e}</Project>
       <Name>XamarinFormsGenericApp</Name>

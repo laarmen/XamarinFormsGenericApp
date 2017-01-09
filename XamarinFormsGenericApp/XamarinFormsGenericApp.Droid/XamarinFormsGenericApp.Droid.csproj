@@ -121,6 +121,10 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Lib\Lib.Droid\Lib.Droid.csproj">
+      <Project>{45fdc0e1-8309-4965-b4b3-b94bcc35b0da}</Project>
+      <Name>Lib.Droid</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XamarinFormsGenericApp\XamarinFormsGenericApp.csproj">
       <Project>{1f709b79-e3ba-4b7f-a10a-6858f5881b9e}</Project>
       <Name>XamarinFormsGenericApp</Name>

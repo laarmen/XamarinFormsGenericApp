@@ -7,5 +7,6 @@
   <Label Text="Welcome to Xamarin Forms!"
            VerticalOptions="Center"
            HorizontalOptions="Center" />
+  <Button Text="Test Dependency service" Clicked="UseDependency"/>
 
 </ContentPage>
